@@ -188,7 +188,8 @@ body {
 
 .image-container img {
     aspect-ratio: 3/4;
-    width: 80%;
+    max-width: 80%;
+    height: auto;
     margin: 20px 0;
 }
 
@@ -255,7 +256,7 @@ body {
 
     #canvas>div {
         width: 100%;
-        height: 50%;
+        /* height: 50%; */
         min-width: 400px;
     }
 
@@ -424,5 +425,11 @@ body {
 @media (min-width: 0) and (max-width: 400px) {
     #main {
         padding: 0 3vw;
+    }
+    #gallery {
+        gap: 65px 12px;
+    }
+    .image-container {
+        padding: 5px;
     }
 }
