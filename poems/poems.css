@@ -59,165 +59,61 @@ body {
     height: 50px;
 }
 
-/* CANVAS */
-#canvas {
-    margin-top: 50px;
-    display: flex;
-    background-color: #e7e6e0;
-    /* height: 600px; */
-    aspect-ratio: 4/2;
-}
+/* GALLERY */
 
-#canvas>div {
-    width: 50%;
-    min-width: 400px;
-}
-
-#canvas-p1 {
-    display: flex;
-    align-items: center;
-}
-
-#canvas-p1>div {
-    margin: auto;
-}
-
-#canvas-p1 p {
-    margin-bottom: 30px;
-}
-
-#canvas-p1 a {
-    color: white;
-    padding: 10px 25px;
-    background-color: black;
-}
-
-#canvas-p2 {
-    background-image: url(imgs/canvasImg.png);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-#canvas p {
-    font-size: 18px;
-}
-
-#canvas h1 {
-    letter-spacing: 1px;
-}
-
-/* REVIEW COUNT */
-#review-count {
-    height: 300px;
+#gallery{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    padding: 0 50px;
 }
 
-#number {
-    font-size: 50px;
-    color: #d54e4e;
-}
-
-/* REVIEW */
-
-#review {
-    margin: 50px 0;
-    height: auto;
-}
-
-#gallery {
-    /* margin: 20px 60px;
+#poem {
+    margin: 0 10%;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
     display: flex;
-    flex-direction: row; */
-    width: 100%;
-    height: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-content: space-evenly;
-    gap: 80px 30px;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    padding: 50px 80px;
+    /* height: 200vw; */
 }
 
-.zoom-image {
-    max-width: 100%;
-    transition: transform 0.5s, opacity 0.5s;
+.poem-container{
+    margin-bottom: 100px;
 }
 
-.image-caption {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    /* background-color: rgba(0, 0, 0, 0.5); */
-    /* color: white; */
-    text-align: center;
-    font-family: "Poppins", sans-serif;
+.poem-container>h3 {
+    margin: 15px 0;
+    font-size: 48px;
+    color: #333333;
     font-weight: 500;
+}
+
+.poem-container>span {
+    color: #444444;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.poem-container>p {
+    color: #444444;
+    line-height: 35px;
+    margin: 25px 0;
+    word-spacing: 1px;
+}
+
+.container-btns {
+    display: flex;
+}
+
+.container-btns>a {
     color: black;
-    padding: 5px 10px;
-    opacity: 0;
-    transition: opacity 0.5s;
+    background-color: gold;
+    padding: 8px 45px;
 }
 
-.image-container:hover .zoom-image {
-    transform: scale(1.1);
-    opacity: 0.5;
-}
-
-.image-container:hover .image-caption {
-    opacity: 1;
-}
-
-.image-container {
-    margin: auto;
-    padding: 15px;
-    /* aspect-ratio: auto; */
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    height: fit-content;
-    border-radius: 5px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    height: 300px;
-    /* aspect-ratio: 4 / 3; */
-}
-
-.image-container div{
-    height: 50%;
-    padding: 8px;
-    overflow: auto;
-}
-
-.image-container div p {
-    /* display: flex; */
-    /* justify-content: center; */
-    font-size: 18px;
-}
-
-.image-container a {
-    font-size: 20px;
-}
-
-
-.image-container img {
-    aspect-ratio: 3/4;
-    width: 80%;
-    margin: 20px 0;
-}
-
-#viewAll {
-    margin: 50px auto;
-    display: flex;
-    justify-content: center;
-}
-
-#viewAll a {
-    font-size: 25px;
-    color: blue;
-    font-weight: 500;
-    text-decoration: underline;
+.container-btn > a:hover{
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
 }
 
 /* FOOTER */
@@ -347,12 +243,12 @@ body {
 }
 
 
-@media (min-width: 0) and (max-width: 550px) {
+/* @media (min-width: 0) and (max-width: 550px) {
     #gallery {
         grid-template-columns: 1fr;
     }
 
-    .image-container{
+    .image-container {
         aspect-ratio: 5/3;
         height: auto;
     }
@@ -360,11 +256,62 @@ body {
     p>br {
         display: block;
     }
-}
-
+} */
+/* 
 @media (min-width: 551px) {
     #canvas-p1 p>br {
         display: none;
+    }
+} */
+
+@media (min-width: 0) and (max-width: 400px) {
+    #main {
+        padding: 0 3vw;
+    }
+}
+
+
+@media (min-width: 0) and (max-width: 660px) {
+    #title-box {
+        padding: 0;
+    }
+    
+    #title-box>div {
+        width: 100%;
+        min-width: 230px;
+        margin: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    #content p {
+        font-size: 16px;
+    }
+    
+    #content {
+        flex-direction: column;
+    }
+    
+    #content div {
+        width: 100%;
+    }
+}
+
+@media (min-width: 0) and (max-width: 760px) {
+    #title-box h1 {
+        font-size: 30px;
+    }
+    
+    #content {
+        padding: 50px 0;
+    }
+    
+    #title-box>div {
+        width: 100%;
+        min-width: 230px;
+        /* margin: 15px; */
+        /* flex-wrap: wrap; */
+        justify-content: center;
     }
 }
 
@@ -393,154 +340,6 @@ body {
     }
 }
 
-@media (min-width: 0) and (max-width: 400px) {
-    #main {
-        padding: 0 3vw;
-    }
-}
-
-
-
-#title-box {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    aspect-ratio: 2/1;
-    /* height: 300px; */
-    height: auto;
-    /* background-color: #ff642d; */
-    padding: 20px 10%;
-    color: #171a22;
-}
-
-.border-bottom{
-    border-bottom: 2px solid gray;
-}
-
-.bgYellow1 {
-    /* background: url(/imgs/backgrounds/bgYellow1.webp); */
-    /* background-repeat: no-repeat;
-    background-position: center; */
-    background-color: #e7dfd8;
-}
-
-#title-box>div {
-    width: 50%;
-    min-width: 230px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-#title-box h1 {
-    font-size: 40px;
-}
-
-#title-box p {
-    font-size: 15px;
-    margin-bottom: 25px;
-}
-
-#review-info {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-}
-
-#title-box span {
-    font-size: 15px;
-}
-
-#cover-page {
-    display: flex;
-    justify-content: center;
-}
-
-#cover-page img {
-    height: 250px;
-}
-
-.audioBookBtn {
-    margin-top: 25px;
-    border: 2px dotted black;
-    padding: 3px;
-    border-radius: 12px;
-}
-
-.audioBookBtn:hover {
-    background-color: rgba(255, 255, 255, 0.555);
-    transition: 0.5s;
-}
-
-.audioBookBtn input{
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    font-size: 15px;
-    font-weight: 600;
-    padding: 0 3px;
-}
-
-/* AUDIOBOOK */
-#AudioBook {
-    padding: 0 15px 50px 15px;
-    align-content: center;
-}
-
-#AudioBook iframe {
-    display: block;
-    /* width: 75%; */
-    margin: auto;
-}
-
-/* CONTENT */
-#poem-secion{
-    display: flexbox;
-    width: 50%;
-    flex-direction: row;
-}
-
-#content {
-    padding: 50px 50px;
-    background-color: white;
-    color: black;
-    display: flex;
-}
-
-#content > div {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-#content > div > h2 {
-    font-size: 30px;
-    font-weight: 400;
-    margin-bottom: 0.8em;
-}
-
-#content h2 {
-    font-size: 30px;
-    font-weight: 600;
-    margin-bottom: 0.8em;
-}
-
-#content h3 {
-    display: inline;
-    font-size: 20px;
-    background-color: gold;
-    padding: 0 4px;
-    border-radius: 10px;
-}
-
-#content h3 {
-    font-weight: 600;
-}
-
-#content p {
-    margin-bottom: 1.5em;
-    font-size: 21px;
-}
 
 @media (min-width: 0) and (max-width: 1050px) {
     #title-box h1 {
@@ -552,45 +351,54 @@ body {
     }
 }
 
-@media (min-width: 0) and (max-width: 760px) {
-    #title-box h1 {
-        font-size: 30px;
-    }
+/* GALLERY */
 
-    #content {
-        padding: 50px 0;
-    }
+@media (min-width: 0) and (max-width: 960px) {
+    #gallery{
+        padding: 0;
+    }    
+}
 
-    #title-box>div {
-        width: 100%;
-        min-width: 230px;
-        /* margin: 15px; */
-        /* flex-wrap: wrap; */
-        justify-content: center;
+@media (min-width: 750px) and (max-width: 830px) {
+    #poem{
+        padding: 50px 40px;
     }
 }
 
-@media (min-width: 0) and (max-width: 660px) {
-    #title-box {
+@media (min-width: 650px) and (max-width: 750px) {
+    #poem{
+        padding: 50px 30px;
+        margin: 0 7.5%;
+    }
+    .poem-container > h3{
+        font-size: 42px;
+    }
+}
+
+@media (min-width: 550px) and (max-width: 650px) {
+    #main{
         padding: 0;
     }
-
-    #title-box>div {
-        width: 100%;
-        min-width: 230px;
-        margin: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
+    #poem{
+        padding: 50px 25px;
+        margin: 0 7.5%;
     }
-
-    #content p {
-        font-size: 16px;
-    }
-
-    #content{
-        flex-direction: column;
-    }
-    #content div {
-        width: 100%;
+    .poem-container > h3{
+        font-size: 40px;
     }
 }
+
+@media (min-width: 0px) and (max-width: 550px) {
+    #main{
+        padding: 0;
+    }
+    #poem{
+        padding: 50px 15px;
+        margin: 0 6%;
+    }
+    .poem-container > h3{
+        font-size: 38px;
+    }
+}
+
+
