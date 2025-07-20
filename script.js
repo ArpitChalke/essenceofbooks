@@ -43,9 +43,9 @@ document.addEventListener("DOMContentLoaded", function () {
       <div class="menu-button" id="menuButton">☰</div>
       <div class="dropdown-menu" id="dropdownMenu">
         <a href="/" class="dropdown-item">HOME</a>
-        <a href="/review.html" class="dropdown-item">REVIEWS</a>
-        <a href="/poems.html" class="dropdown-item">POEMS</a>
-        <a href="/aboutus.html" class="dropdown-item">ABOUT US</a>
+        <a href="review.html" class="dropdown-item">REVIEWS</a>
+        <a href="poems.html" class="dropdown-item">POEMS</a>
+        <a href="aboutus.html" class="dropdown-item">ABOUT US</a>
       </div>
   `;
 
